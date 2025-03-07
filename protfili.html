@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #6200ea;
+            padding: 15px 50px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: linear-gradient(to right, #6200ea, #3700b3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-top: 15px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            background: #ffd700;
+            color: #333;
+            padding: 12px 25px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <script src=".js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Aditya's Portfolio</h1>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Hi all, I'm Aditya 👋</h2>
+        <p>A passionate Full Stack Developer 🚀 experienced in building Web and Mobile applications using JavaScript, React.js, Node.js, and other cool libraries and frameworks.</p>
+        
+        <div class="buttons">
+            <a href="#contact" class="btn">Contact Me</a>
+            <a href="" class="btn">See My Resume</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to add smooth scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
